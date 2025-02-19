@@ -1,8 +1,8 @@
 # Time complexity - O(h) -> O(logn) for perfect/complete BST
 # Space complexity - O(h)
 
-# Approach - Run dfs on the BST, make use of the property that for root to be lowest common ancestor,
-# root.left < root < root.right. Return root in that case.
+# Approach - Run dfs on the BST, make use of the property that for root to be 
+# lowest common ancestor, root.left < root < root.right. Return root in that case.
 
 # Definition for a binary tree node.
 class TreeNode:
@@ -12,7 +12,8 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', \
+        q: 'TreeNode') -> 'TreeNode':
         if root == None:
             return root
         return self.dfs(root, p, q)
